@@ -1,11 +1,17 @@
 import { Button, Form, Input } from 'antd';
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { SignupPayload, signup } from '../../store/actions/auth.action';
 import Layout from './Layout';
 
 const Signup = () => {
+  const dispatch = useDispatch();
+  const onFinish = (value: SignupPayload) => {
+    dispatch(signup(value));
+  };
   return (
     <Layout title="Registration">
-      <Form>
+      <Form onFinish={onFinish}>
         <Form.Item label="Username" name="username">
           <Input />
         </Form.Item>
@@ -16,7 +22,9 @@ const Signup = () => {
           <Input />
         </Form.Item>
         <Form.Item>
-          <Button type="primary">Submit</Button>
+          <Button type="primary" htmlType="submit">
+            Submit
+          </Button>
         </Form.Item>
       </Form>
     </Layout>
