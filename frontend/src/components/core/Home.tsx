@@ -4,5 +4,9 @@ import Layout from './Layout';
 
 export default function Home() {
   const state = useSelector((state) => state);
-  return <Layout>Home{JSON.stringify(state)}</Layout>;
+  return (
+    <Layout title="E-shop" subTitle="Enjoy you life">
+      Home{JSON.stringify(state)}
+    </Layout>
+  );
 }

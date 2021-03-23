@@ -4,6 +4,7 @@ import store, { history } from './store/index';
 import { API } from './config';
 import Routes from './Routes';
 import { ConnectedRouter } from 'connected-react-router';
+import './style.css';
 console.log(API);
 
 ReactDOM.render(
