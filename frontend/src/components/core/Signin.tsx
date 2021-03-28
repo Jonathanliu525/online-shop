@@ -42,7 +42,7 @@ const Signin = () => {
         return <Redirect to="/user/dashboard" />;
       } else {
         //admin
-        return <Redirect to="/user/dashboard" />;
+        return <Redirect to="/admin/dashboard" />;
       }
     }
   };

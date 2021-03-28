@@ -14,13 +14,6 @@ import {
 } from '../actions/auth.action';
 import { put, takeEvery } from 'redux-saga/effects';
 
-import { AxiosResponse } from 'axios';
-
-interface LoginResponse {
-  token: string;
-  user: { _id: string; name: string; email: string; role: number };
-}
-
 function* handleSignup(action: SignupAction) {
   try {
     yield axios.post(`${API}/signup`, action.payload);

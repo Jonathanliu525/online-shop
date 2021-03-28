@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema(
     name: {
       type: String,
       trim: true,
-      maxlength: [4, '昵称长度不能大于4'],
+      maxlength: [12, '昵称长度不能大于12'],
       required: [true, '请填写昵称'],
     },
     email: {
